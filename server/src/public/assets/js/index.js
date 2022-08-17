@@ -21,7 +21,7 @@ uploadEl.click((e) => {
 
     const fcLength = fileChunks.length;
     const filename = file.name;
-    fileChunks.map((chunk, idx) => {
+    fileChunks.forEach((chunk, idx) => {
         let data = new FormData();
         data.append('chunk', chunk);
         data.append('idx', idx);
